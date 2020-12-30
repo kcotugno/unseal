@@ -275,7 +275,7 @@ func parseEnvironment(raw string) map[string]string {
 			continue
 		}
 
-		splitVar := strings.Split(v, "=")
+		splitVar := strings.SplitN(v, "=", 2)
 		if len(splitVar) > 1 {
 			vars[splitVar[0]] = splitVar[1]
 		}
